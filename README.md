@@ -20,3 +20,5 @@ npm run build
 De workflow in `.github/workflows/pages.yml` bouwt automatisch `dist` en publiceert die naar GitHub Pages bij elke push naar `main`. Zet in GitHub bij **Settings → Pages** de source op **GitHub Actions**.
 
 De Vite base path is ingesteld op `/GTA6REMAKE/`, passend bij de repository.
+
+De bronbestanden staan in `src/`; de gegenereerde productieversie staat ook in de repository-root zodat de bestaande Pages-branch direct kan renderen.
