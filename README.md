@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Besturing: WASD/pijltjes bewegen, muis slepen om rond te kijken, scrollen om te zoomen, Shift sprinten, Space springen, E interactie en Escape pauzeren.
+Besturing: ZQSD/pijltjes bewegen (Z vooruit, S achteruit, Q links, D rechts), muis slepen om rond te kijken, scrollen om te zoomen, Shift sprinten, Space springen, E interactie en Escape pauzeren.
 
 ## Build en GitHub Pages
 
