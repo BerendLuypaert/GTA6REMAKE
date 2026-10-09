@@ -1,8 +1,22 @@
-# GTA6 Remake
+# Neon Valley — 3D Open World Browser Game
 
-Kleine startpagina voor GitHub Pages.
+Een volledig speelbare low-poly Three.js open-world game, gemaakt met Vite en JavaScript.
 
-## Publiceren
+## Lokaal starten
 
-Ga in GitHub naar **Settings → Pages** en kies bij **Build and deployment** voor **Deploy from a branch**.
-Selecteer branch `main` en map `/ (root)`, en klik daarna op **Save**.
+```bash
+npm install
+npm run dev
+```
+
+Besturing: WASD/pijltjes bewegen, muis slepen om rond te kijken, scrollen om te zoomen, Shift sprinten, Space springen, E interactie en Escape pauzeren.
+
+## Build en GitHub Pages
+
+```bash
+npm run build
+```
+
+De workflow in `.github/workflows/pages.yml` bouwt automatisch `dist` en publiceert die naar GitHub Pages bij elke push naar `main`. Zet in GitHub bij **Settings → Pages** de source op **GitHub Actions**.
+
+De Vite base path is ingesteld op `/GTA6REMAKE/`, passend bij de repository.
