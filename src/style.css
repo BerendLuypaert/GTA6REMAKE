@@ -40,6 +40,14 @@ button:hover { transform: translateY(-2px); filter: brightness(1.08); }
 #minimap { position: absolute; top: 18px; right: 18px; width: 156px; height: 156px; border: 3px solid #fff8; border-radius: 18px; background: #12202dcc; box-shadow: 0 8px 20px #0018; }
 #hint { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); padding: 12px 18px; border-radius: 12px; background: #17162dcc; color: #ffe8a0; font-size: .9rem; opacity: 0; transition: opacity .2s; }
 #controls { position: absolute; bottom: 18px; left: 18px; padding: 10px 12px; border-radius: 12px; color: #ffffffcc; background: #17162d99; font-size: .74rem; line-height: 1.6; }
+#crosshair { position: fixed; left: 50%; top: 50%; width: 28px; height: 28px; transform: translate(-50%, -50%) scale(.8); opacity: 0; z-index: 6; pointer-events: none; color: #fff; filter: drop-shadow(0 1px 3px #000); transition: opacity .16s, transform .16s; }
+#crosshair.active { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+#crosshair.aiming { transform: translate(-50%, -50%) scale(1.2); color: #ffe66d; }
+#crosshair i, #crosshair b, #crosshair em, #crosshair strong { position: absolute; display: block; background: currentColor; border-radius: 2px; }
+#crosshair i { width: 2px; height: 9px; left: 13px; top: 0; }
+#crosshair b { width: 2px; height: 9px; left: 13px; bottom: 0; }
+#crosshair em { width: 9px; height: 2px; left: 0; top: 13px; }
+#crosshair strong { width: 9px; height: 2px; right: 0; top: 13px; }
 #pause { z-index: 111; }
 .pause-card { padding: 32px; }
 @media (max-width: 600px) { #minimap { width: 120px; height: 120px; } #controls { font-size: .65rem; } }
