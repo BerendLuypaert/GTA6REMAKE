@@ -33,3 +33,4 @@ function reportCrime(){wantedLevel=Math.min(6,wantedLevel+1);ensurePolice();forc
 function ensurePoliceFixed(){const needed=Math.min(3,Math.max(1,Math.ceil(wantedLevel/2)));while(policeCars.length<needed){const i=policeCars.length,angle=i*2.4+1;makeCar(Math.cos(angle)*95,Math.sin(angle)*95,0x243b73,'z',1);const p=cars[cars.length-1];p.userData.police=true;cars.pop();policeCars.push(p)}}
 function positionPoliceFixed(){if(wantedLevel<=0||wasted)return;try{const target=vehicleMode&&currentCar?currentCar:player;for(let i=0;i<policeCars.length;i++){const p=policeCars[i],angle=i*2.4+1,distance=28+i*9;if(p.position.distanceTo(target.position)>distance+12)p.position.set(target.position.x+Math.cos(angle)*distance,.1,target.position.z+Math.sin(angle)*distance)}}catch(error){console.error('Police positioning error',error)}}
 ensurePolice=ensurePoliceFixed;forcePoliceNearPlayer=positionPoliceFixed;
+setInterval(positionPoliceFixed,250);
